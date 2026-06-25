@@ -6,7 +6,7 @@ def NULL_not_found(object: any) -> int:
         print("Nothing: None ", str(type(object)))
         return 0
     elif str(type(object)) == "<class 'float'>":
-        if math.isnan(float(object)):
+        if object != object:
             print("Cheese: nan ", str(type(object)))
             return 0
     elif str(type(object)) == "<class 'int'>":
