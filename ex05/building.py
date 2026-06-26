@@ -1,8 +1,10 @@
 import sys
 
+
 def ispunct(char):
-    punctuation_chars = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    punctuation_chars = "''!()-[]{};:'\"\\,<>./?@#$%^&*_~''"
     return char in punctuation_chars
+
 
 def main():
     if len(sys.argv) > 2:
@@ -15,13 +17,12 @@ def main():
         str = sys.argv[1]
     if len(str) == 0:
         print("Error: Empty string provided.")
-        return 
+        return
     uppercase_count = 0
     lowercase_count = 0
     punctuation_count = 0
     space_count = 0
     digit_count = 0
-
 
     for i in range(len(str)):
         if str[i].isupper():
@@ -43,6 +44,7 @@ def main():
     print(punctuation_count, "punctuation marks")
     print(space_count, "spaces")
     print(digit_count, "digits")
+
 
 if __name__ == "__main__":
     main()

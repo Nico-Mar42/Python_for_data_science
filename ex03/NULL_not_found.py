@@ -1,6 +1,4 @@
-import math
 def NULL_not_found(object: any) -> int:
-
 
     if str(type(object)) == "<class 'NoneType'>":
         print("Nothing: None ", str(type(object)))
@@ -18,7 +16,7 @@ def NULL_not_found(object: any) -> int:
             print("Empty: ", str(type(object)))
             return 0
     elif str(type(object)) == "<class 'bool'>":
-        if bool(object) == False:
+        if bool(object) is False:
             print("Fake: False ", str(type(object)))
             return 0
 
