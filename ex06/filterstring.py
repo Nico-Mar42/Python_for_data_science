@@ -12,33 +12,34 @@ def ispunct(char):
 
 
 def main():
-    if len(sys.argv) != 3:
-        print("AssertionError: the arguments are bad1")
+    try:
+        args = sys.argv[1:3]
+        assert len(args) == 2, "the arguments are bad"
+
+        S, N = args
+        N = int(N)
+    except AssertionError as e:
+        print(f"AssertionError: {e}")
+        return
+    except ValueError:
+        print("AssertionError: the arguments are bad")
         return
 
-    if not sys.argv[2].isdigit():
-        print("AssertionError: the arguments are bad2")
-        return
-
-    N = int(sys.argv[2])
-    S = sys.argv[1]
     if list(ft_filter(ispunct, S)):
-        print("AssertionError: the arguments are bad3")
+        print("AssertionError: the arguments are bad")
         return
     if [x for x in S if x in "\t\n\r"]:
-        print("AssertionError: the arguments are bad4")
+        print("AssertionError: the arguments are bad")
         return
     if N < 0:
-        print("AssertionError: the arguments are bad5")
+        print("AssertionError: the arguments are bad")
         return
 
     S_list = S.split(" ")
 
-    print("S_list:", S_list)
-
     W_list = list(ft_filter(lambda word: if_length_greater(word, N), S_list))
 
-    print("W_list:", W_list)
+    print(W_list)
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="ft_package",
@@ -8,6 +8,5 @@ setup(
     author_email="nicolmar@42.fr",
     url="https://github.com/Nico-Mar42/ft_package",
     license="MIT",
-    py_modules=["ft_package"],
-    package_dir={"": "src"},
+    packages=find_packages(),
 )
