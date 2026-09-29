@@ -16,14 +16,14 @@ weight2 = [165.3, 38.4]
 
 bmi = give_bmi(height2, weight2)
 
-print("\033[93m\n------ Test not same lenght ------\n\033[0m")
+print("\033[93m\n\n------ Test not same lenght ------\n\033[0m")
 
 height3 = [2.71, 1.15, 2]
 weight3 = [165.3, 38.4]
 
 bmi = give_bmi(height3, weight3)
 
-print("\033[93m\n------ Test good arguments ------\n\033[0m")
+print("\033[93m\n------ Test with good arguments ------\n\033[0m")
 
 height4 = [2.71, 1.15]
 weight4 = [165.3, 38.4]
