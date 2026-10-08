@@ -1,6 +1,5 @@
 import numpy as np
 
-__doc__ 
 
 def give_bmi(height: list[int | float], weight: list[int | float]) \
         -> list[int | float]:
@@ -17,8 +16,8 @@ def give_bmi(height: list[int | float], weight: list[int | float]) \
         assert len(height) == len(weight), \
             "height and weight must have the same length."
 
-    except AssertionError as error:
-        print(error)
+    except AssertionError as e:
+        print(f"AssertionError : {e}")
         return []
 
     height_array = np.array(height)
