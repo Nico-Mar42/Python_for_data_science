@@ -9,7 +9,8 @@ python3 -m venv "$VENV_DIR"
 "$VENV_DIR/bin/python" -m pip install numpy
 "$VENV_DIR/bin/python" -m pip install Pillow
 "$VENV_DIR/bin/python" -m pip install matplotlib
-
+"$VENV_DIR/bin/python" -m pip install pandas
+"$VENV_DIR/bin/python" -m alias norminette=flake8
 
 source "$VENV_DIR/bin/activate"
 echo "Environnement virtuel active."
